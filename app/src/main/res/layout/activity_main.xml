@@ -6,9 +6,11 @@
     android:background="@color/white"
     android:stretchColumns="*">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+
+    <GridView
+        android:id="@+id/gridView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/card_design" />
+        android:numColumns="3"
+        android:gravity="center"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
