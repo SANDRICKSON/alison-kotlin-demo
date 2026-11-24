@@ -1,28 +1,40 @@
 package com.example.alisonxmldemo
 
 import android.os.Bundle
-import android.widget.ArrayAdapter
-import android.widget.ListView
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.alisonxmldemo.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    lateinit var listView: ListView
+    private val binding by lazy{ ActivityMainBinding.inflate(layoutInflater) }
+    lateinit var recyclerView: RecyclerView
+    var countryNameList = ArrayList<String>()
+    var detailsList = ArrayList<String>()
+    var imageList = ArrayList<Int>()
+    lateinit var adapter: CountriesAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
-        listView=findViewById(R.id.listView)
-        var countryList = resources.getStringArray(R.array.countries)
-        var arrayAdapter = ArrayAdapter(this,android.R.layout.simple_list_item_1,countryList)
-        listView.adapter = arrayAdapter
+        setContentView(binding.root)
+        recyclerView = binding.recyclerView
+        recyclerView.layoutManager = LinearLayoutManager(this@MainActivity)
 
-        listView.setOnItemClickListener{
-                parent,view,position,id ->
-            val countryName: String = parent.getItemAtPosition(position).toString()
-            Toast.makeText(applicationContext,"You selected the " + countryName, Toast.LENGTH_SHORT).show()
-        }
+        countryNameList.add("UK")
+        countryNameList.add("USA")
+        countryNameList.add("Germany")
+
+        detailsList.add("This is UK")
+        detailsList.add("This is USA")
+        detailsList.add("This is Germany")
+
+        imageList.add(R.drawable.uk)
+        imageList.add(R.drawable.usa)
+        imageList.add(R.drawable.germany)
+
+        adapter = CountriesAdapter(countryNameList,detailsList,imageList,this@MainActivity)
+        recyclerView.adapter = adapter
     }
 
 }
