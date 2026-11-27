@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">ჩემი აპლიკაცია</string>
+    <string name="add_todo">დაამატე დავალება</string>
+    <string name="add">დამატება</string>
+    <string name="update">განახლება</string>
+    <string name="edit_todo">დავალების რედაქტირება</string>
+    <string name="delete_todo">დავალების წაშლა</string>
+    <string name="delete_confirm">დარწმუნებული ხართ, რომ გსურთ ამ დავალების წაშლა?</string>
+    <string name="yes">დიახ</string>
+    <string name="no">არა</string>
+    <string name="cancel">გაუქმება</string>
     <string name="name">სახელი</string>
     <string name="age">ასაკი</string>
     <string name="message">შეტყობინება</string>
