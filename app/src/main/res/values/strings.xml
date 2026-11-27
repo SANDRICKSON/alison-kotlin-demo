@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">Alison XML Demo</string>
+    <string name="name">Name</string>
+    <string name="age">Age</string>
+    <string name="message">Message</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="send">Send</string>
     <string-array name="countries">
         <item>Afghanistan</item>
         <item>Albania</item>

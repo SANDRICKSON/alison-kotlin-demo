@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ჩემი აპლიკაცია</string>
+    <string name="name">სახელი</string>
+    <string name="age">ასაკი</string>
+    <string name="message">შეტყობინება</string>
+    <string name="send">გაგზავნა</string>
+    <string name="remember_me">დამიმახსოვრე</string>
+</resources>
